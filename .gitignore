@@ -1,0 +1,12 @@
+.DS_Store
+*.obj
+*.ilk
+.svn
+archive
+bin
+*.rar
+*.sdf
+*.suo
+*.ncb
+*.exe
+*.opensdf
