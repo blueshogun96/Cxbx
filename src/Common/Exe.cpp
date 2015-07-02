@@ -329,6 +329,21 @@ void Exe::Export(const char *x_szExeFilename)
         }
     }
 
+	// Write correct SizeOfImage
+	{
+		printf( "Exe::Export: Writing Image Size..." );
+		int CurrentSize = ftell( ExeFile );
+
+		// Seek to offset of File Size
+		fseek( ExeFile, 0x108, SEEK_SET );
+		// Write calculated size
+		fwrite( &CurrentSize, sizeof( int ), 1, ExeFile );
+
+		printf( "OK\n" );
+	}
+
+	fflush( ExeFile );
+
 cleanup:
 
     if(GetError() != 0)

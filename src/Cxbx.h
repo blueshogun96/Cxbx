@@ -74,9 +74,9 @@ typedef signed long    sint32;
 #define _DEBUG_ALLOC
 #endif
 /*! define this to trace intercepted function calls */
-#ifdef _DEBUG
+//#ifdef _DEBUG
 #define _DEBUG_TRACE
-#endif
+//#endif
 /*! define this to trace warnings */
 #define _DEBUG_WARNINGS
 /*! define this to trace vertex shader constants */
